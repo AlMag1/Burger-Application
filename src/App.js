@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className={classes.App}>
-        <form method="POST">
+        <form method="POST" >
           <div className={classes.header}>
             <div className={classes.title}>
               <p>BURGER<br />HUB</p>
