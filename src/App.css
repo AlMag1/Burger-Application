@@ -20,6 +20,10 @@ img {
     padding: 5px;
 }
 
+img:first-child {
+    margin-left: 5px;
+}
+
 .App {
     font-family: 'Open Sans', sans-serif;
     min-height: 100%;
