@@ -4,7 +4,7 @@ import classes from '../App.css';
 class LoginForm extends Component {
     render() {
         return (
-            <form method="POST" >
+            <form method="POST" className={classes.employee}>
                 <div>
                     <input type="text" name="username" placeholder="Username" className={classes.credentials}></input>
                 </div>
@@ -12,8 +12,7 @@ class LoginForm extends Component {
                     <input type="password" name="password" placeholder="Password" className={classes.credentials}></input>
                 </div>
                 <div>
-                    <input type="submit" className={classes.sign} value="Sign in" />
-                    <button className={classes.sign}>Sign up</button>
+                    <input type="submit" className={classes.orderButton} value="Sign in" />
                 </div>
             </form>
         );

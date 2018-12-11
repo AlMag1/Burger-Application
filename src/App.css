@@ -24,6 +24,10 @@ img:first-child {
     margin-left: 6px;
 }
 
+body {
+    font-size: 13px;
+}
+
 .App {
     font-family: 'Open Sans', sans-serif;
     min-height: 100%;
@@ -57,6 +61,22 @@ img:first-child {
 .sign:hover {
     background-color: #008CBA;
     color: white;
+}
+
+.loginButtons {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    color: black;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+}
+
+.loginButtons:hover {
+    background-color: #008CBA;
+    color: black;
 }
 
 .title {
@@ -114,4 +134,22 @@ img:first-child {
 
 .employee {
     text-align: center;
+}
+
+.signUp {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fields {
+    padding: 2px;
+}
+
+label {
+    margin: 10px;
+}
+
+.inputs {
+    margin-left: 20px;
 }
