@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Order.css';
+import BurgerBuilder from '../BurgerOrder/BurgerBuilder';
 
 import Burger1 from '../../assets/img/Menu/1.jpg';
 import Burger2 from '../../assets/img/Menu/2.jpg';
@@ -70,6 +71,7 @@ class Order extends Component {
                         </p>
                     </div>
                 </div>
+                <BurgerBuilder />
             </div>
         );
     }
