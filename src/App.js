@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
-import classes from './App.css';
 
+import classes from './App.css';
 import { Route } from 'react-router-dom';
 import Employee from './components/Employees/Employee';
 import { BrowserRouter } from 'react-router-dom';
@@ -13,6 +12,7 @@ import Admin from './components/Admins/Admin';
 import EditCustomers from './components/Edit-Customers/EditCustomers';
 import SignIn from './components/Login/SignIn';
 import SignUp from './components/Login/SignUp';
+import Order from './components/Order/Order';
 
 class App extends Component {
 
@@ -23,7 +23,7 @@ class App extends Component {
           <div className={classes.header}>
             <div className={classes.title}>
               <p>BURGER<br />HUB</p>
-              <p><br /><br /><br /></p>
+              {/* <p><br /><br /><br /></p> */}
             </div>
             <SignIn />
           </div>
@@ -34,6 +34,7 @@ class App extends Component {
           <Route path="/edit-customers" component={EditCustomers} />
           <Route path="/login" component={LoginForm} />
           <Route path="/signup" component={SignUp} />
+          <Route path="/order" component={Order} />
           <Footer />
         </div>
       </BrowserRouter>

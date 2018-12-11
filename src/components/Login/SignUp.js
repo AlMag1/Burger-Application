@@ -44,6 +44,7 @@ class SignUp extends Component {
                         <div className={classes.fields}>
                             
                         </div>
+                        <input type="submit" value="Submit" className={classes.sign}/>
                     </div>
                 </form>
             </div>

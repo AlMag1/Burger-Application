@@ -20,3 +20,19 @@
     border: 1px solid #0C0;
 }
 
+.sign {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+}
+
+.sign:hover {
+    background-color: #008CBA;
+    color: white;
+}
+

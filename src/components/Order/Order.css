@@ -1,0 +1,10 @@
+.outer {
+    width: 100%;
+}
+
+.burger {
+    text-align: center;
+    width: 33%;
+    margin: 0 auto;
+    display: inline-block;
+}
