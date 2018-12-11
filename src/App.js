@@ -3,16 +3,16 @@ import './App.css';
 import classes from './App.css';
 
 import { Route } from 'react-router-dom';
-import Employee from './components/Employee';
+import Employee from './components/Employees/Employee';
 import { BrowserRouter } from 'react-router-dom';
-import Home from './components/Home';
-import LoginForm from './components/LoginForm';
-import Footer from './components/Footer';
-import Customer from './components/Customer';
-import Admin from './components/Admin';
-import EditCustomers from './components/EditCustomers';
-import SignIn from './components/SignIn';
-import SignUp from './components/SignUp';
+import Home from './components/Static/Home';
+import LoginForm from './components/Login/LoginForm';
+import Footer from './components/Static/Footer';
+import Customer from './components/Customers/Customer';
+import Admin from './components/Admins/Admin';
+import EditCustomers from './components/Edit-Customers/EditCustomers';
+import SignIn from './components/Login/SignIn';
+import SignUp from './components/Login/SignUp';
 
 class App extends Component {
 

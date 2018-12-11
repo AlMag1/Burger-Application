@@ -47,38 +47,6 @@ body {
     opacity: 0.8;
 }
 
-.sign {
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    font-family: inherit;
-    color: white;
-    background: transparent;
-    border: 2px solid #0099CC;
-    border-radius: 6px;
-}
-
-.sign:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.loginButtons {
-    padding: 5px;
-    margin: 5px;
-    cursor: pointer;
-    font-family: inherit;
-    color: black;
-    background: transparent;
-    border: 2px solid #0099CC;
-    border-radius: 6px;
-}
-
-.loginButtons:hover {
-    background-color: #008CBA;
-    color: black;
-}
-
 .title {
     text-align: center;
     font-weight: 900;
@@ -91,59 +59,6 @@ body {
     .title {
         font-size: 20px;
     }
-}
-
-.footer {
-    border-top: 1px solid black;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
-
-.description {
-    text-align: center;
-}
-
-.credentials {
-    border: none;
-    border-bottom: 1px solid black;
-    margin: 5px;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-.credentials:focus {
-    border: 1px solid #0C0;
-}
-
-.orderButton {
-    padding: 5px;
-    margin: 2%;
-    cursor: pointer;
-    font-family: inherit;
-    color: #0099CC;
-    background: transparent;
-    border: 2px solid #0099CC;
-    border-radius: 6px;
-}
-
-.orderButton:hover {
-    background-color: #008CBA;
-    color: white;
-}
-
-.employee {
-    text-align: center;
-}
-
-.signUp {
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.fields {
-    padding: 2px;
 }
 
 label {

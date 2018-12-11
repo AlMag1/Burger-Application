@@ -1,19 +1,15 @@
-.employee {
-    text-align: center;
-}
-
-.orderButton {
+.sign {
     padding: 5px;
-    margin: 2%;
+    margin: 5px;
     cursor: pointer;
     font-family: inherit;
-    color: #0099CC;
+    color: white;
     background: transparent;
     border: 2px solid #0099CC;
     border-radius: 6px;
 }
 
-.orderButton:hover {
+.sign:hover {
     background-color: #008CBA;
     color: white;
 }

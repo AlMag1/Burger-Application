@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import classes from '../App.css';
-import Burger from '../assets/img/burger.jpg'
-import Burger2 from '../assets/img/burger2.jpg';
-import Burger3 from '../assets/img/burger3.jpg';
+import classes from './Header.css';
+import Burger from '../../assets/img/burger.jpg'
+import Burger2 from '../../assets/img/burger2.jpg';
+import Burger3 from '../../assets/img/burger3.jpg';
 
 class Home extends Component {
     render() {

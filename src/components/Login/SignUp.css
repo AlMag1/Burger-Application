@@ -1,0 +1,22 @@
+.signUp {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fields {
+    padding: 2px;
+}
+
+.credentials {
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.credentials:focus {
+    border: 1px solid #0C0;
+}
+
