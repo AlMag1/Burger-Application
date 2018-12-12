@@ -5,10 +5,7 @@ import Menu from './Menu';
 class Order extends Component {
     render() {
         return (
-            <div>
-                <Menu />
-                <BurgerBuilder />
-            </div>
+            <BurgerBuilder />
         );
     }
 }

@@ -17,11 +17,11 @@ class CustomerList extends React.Component {
     render() {
         return (
             <ul>
-                {this.state.customers.map(person =>
-                    <li>
-                        <div>{person.name}</div>
-                        <div>{person.email}</div>
-                        <div><span>id:</span>{person.id}</div>
+                {this.state.customers.map(customer =>
+                    <li key={'customer-'+customer.id}>
+                        <div>{customer.name}</div>
+                        <div>Email: {customer.email}</div>
+                        <div>id: {customer.id}</div>
                     </li>
                 )}
             </ul>

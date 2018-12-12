@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import BuildControls from './BuildControls';
+import _ from 'lodash';
 
 
 const BURGER_PRICES = {
@@ -79,8 +80,10 @@ class BurgerBuilder extends Component {
             disabledInfo[key] = disabledInfo[key] <= 0
         }
 
-        console.log(this.state.totalPrice);  // total price to be posted to backend
-        console.log(this.state.burgers); // order details to be posted to backend
+        console.log(this.state.totalPrice);  // total price to be posted to backend 
+        const order = _.pickBy(this.state.burgers, item => item !== 0); // remove empty items of the order
+        console.log(order); // order details to be posted to backend
+
 
         return (
             <div>

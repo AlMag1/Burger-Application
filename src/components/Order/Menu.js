@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Order.css';
+import {Card, Icon} from 'antd';
 
 import Burger1 from '../../assets/img/Menu/1.jpg';
 import Burger2 from '../../assets/img/Menu/2.jpg';
@@ -17,10 +18,18 @@ class Menu extends Component {
                     <p>
                         <strong>Cheese & Bacon Burger</strong>
                         <br />
-                        Τυρί Ωρίμανσης Cheddar, Μπέικον, Μαγιονέζα, <br />
-                        Tomato Jam, Μαρούλι, Τομάτα, Κρεμμύδι
                         </p>
                 </div>
+                <Card
+                    style={{ width: 300 }}
+                    cover={<img alt="example" src={Burger1} />}
+                    actions={[<span><Icon type="minus-circle" /> Remove</span>, <span><Icon type="plus-circle" /> Add</span>]}
+                >
+                    <Card.Meta
+                    title="Cheese & Bacon Burger"
+                    description="Τυρί Ωρίμανσης Cheddar, Μπέικον, Μαγιονέζα,Tomato Jam, Μαρούλι, Τομάτα, Κρεμμύδι"
+                    />
+                </Card>
                 <div className={classes.burger}>
                     <img src={Burger2} alt="first-burger" />
                     <p>

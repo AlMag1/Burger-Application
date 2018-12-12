@@ -18,10 +18,10 @@ class OrderList extends React.Component {
         return (
             <ul>
                 {this.state.orders.map(order =>
-                    <li>
+                    <li key={'order-'+order.id}>
                         <div>{order.name}</div>
                         <div>{order.email}</div>
-                        <div><span>id:</span>{order.id}</div>
+                        <div>id:{order.id}</div>
                     </li>
                 )}
             </ul>

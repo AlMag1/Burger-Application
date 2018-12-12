@@ -1,10 +1,9 @@
 import React from 'react';
-
 import classes from './BuildControls.css';
-import BuildControl from './BuildControl';
+import {Card, Icon, Row, Col} from 'antd';
 
 const controls = [
-    { label: 'Cheese & Bacon', type: 'cheesebacon' },
+    { label: 'Cheese & Bacon', type: 'cheesebacon', description: "Τυρί Ωρίμανσης Cheddar, Μπέικον, Μαγιονέζα,Tomato Jam, Μαρούλι, Τομάτα, Κρεμμύδι" },
     { label: 'Cheeseburger', type: 'cheese' },
     { label: 'Tower Burger', type: 'tower' },
     { label: 'New Yorker', type: 'newyork' },
@@ -14,16 +13,25 @@ const controls = [
 
 const buildControls = (props) => (
     <div className={classes.BuildControls}>
-        <p>Current Price: <strong>{props.price.toFixed(2)}</strong></p>
-        {controls.map(ctrl => (
-            <BuildControl
-                key={ctrl.label}
-                label={ctrl.label}
-                added={() => props.burgerAdded(ctrl.type)}
-                removed={() => props.burgerRemoved(ctrl.type)}
-                disabled={props.disabled[ctrl.type]} />
+        <Row gutter={16} style={{maxWidth: '800px'}}>
+        {controls.map((ctrl,index) => (
+            <Col span={8} key={ctrl.label}>
+                <Card
+                    cover={<img alt="example" src={'/img/Menu/' + (index+1) +'.jpg'} />}
+                    actions={[
+                        <span onClick={() => props.burgerRemoved(ctrl.type)}><Icon type="minus-circle" /> Remove</span>, 
+                        <span onClick={() => props.burgerAdded(ctrl.type)}><Icon type="plus-circle" /> Add</span>
+                    ]}
+                >
+                    <Card.Meta
+                    title={ctrl.label}
+                    description={ctrl.description}
+                    />
+                </Card>
+            </Col>
         ))}
-        <button className={classes.OrderButton} disabled={!props.purchasable}>ORDER NOW</button>
+        </Row>
+        <button className={classes.OrderButton} disabled={!props.purchasable}>ORDER NOW {props.price ? props.price.toFixed(2) + ' €' : ''}</button>
     </div>
 );
 
