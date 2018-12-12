@@ -15,10 +15,10 @@ const BURGER_PRICES = {
 class BurgerBuilder extends Component {
     state = {
         burgers: {
-            cheese: 0,
-            newyork: 0,
             cheesebacon: 0,
+            cheese: 0,
             tower: 0,
+            newyork: 0,
             sweetchili: 0,
             mexican: 0
         },
@@ -89,7 +89,8 @@ class BurgerBuilder extends Component {
                     burgerRemoved={this.removeBurgerHandler}
                     disabled={disabledInfo}
                     price={this.state.totalPrice}
-                    purchasable={this.state.purchasable} />
+                    purchasable={this.state.purchasable}
+                />
             </div>
         );
     }
