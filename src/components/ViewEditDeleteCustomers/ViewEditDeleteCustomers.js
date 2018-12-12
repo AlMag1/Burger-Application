@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './EditCustomers.css';
+import classes from './ViewEditDeleteCustomers.css';
 
 class EditCustomers extends Component {
     render() {
