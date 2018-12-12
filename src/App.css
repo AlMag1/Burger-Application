@@ -80,3 +80,20 @@ label {
 .inputs {
     margin-left: 20px;
 }
+
+.sign {
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    color: white;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.sign:hover {
+    background-color: #008CBA;
+    color: white;
+}

@@ -19,6 +19,7 @@
     font-size: 1.2em;
     padding: 15px 30px;
     box-shadow: 2px 2px 2px #966909;
+    margin: 20px;
 }
 
 .OrderButton:hover,
@@ -37,6 +38,10 @@
 
 .OrderButton:not(:disabled) {
     animation: enable 0.3s linear;
+}
+
+.cards {
+    margin: 10px;
 }
 
 @keyframes enable {

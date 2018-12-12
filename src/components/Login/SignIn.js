@@ -6,7 +6,8 @@ class SignIn extends Component {
     render() {
         return (
             <div>
-                <div style={{textAlign: "right"}}>
+                <div style={{ textAlign: "right" }}>
+                    <Link to="/" className={classes.sign} >Home</Link>
                     <Link to="/login" className={classes.sign}>Sign in</Link>
                     <Link to="/signup" className={classes.sign}>Sign up</Link>
                 </div>

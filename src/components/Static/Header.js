@@ -8,6 +8,7 @@ class Header extends Component {
     render() {
         return (
             <div className={classes.header}>
+                
                 <SignIn />
                 <div className={classes.title}>
                     <h1>

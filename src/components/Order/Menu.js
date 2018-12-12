@@ -20,22 +20,13 @@ class Menu extends Component {
                         <br />
                         </p>
                 </div>
-                <Card
-                    style={{ width: 300 }}
-                    cover={<img alt="example" src={Burger1} />}
-                    actions={[<span><Icon type="minus-circle" /> Remove</span>, <span><Icon type="plus-circle" /> Add</span>]}
-                >
-                    <Card.Meta
-                    title="Cheese & Bacon Burger"
-                    description="Τυρί Ωρίμανσης Cheddar, Μπέικον, Μαγιονέζα,Tomato Jam, Μαρούλι, Τομάτα, Κρεμμύδι"
-                    />
-                </Card>
+               
                 <div className={classes.burger}>
                     <img src={Burger2} alt="first-burger" />
                     <p>
                         <strong>Cheeseburger</strong>
                         <br />
-                        Τυρί Ωρίμανσης Cheddar, Μαγιονέζα, <br />
+                        Τυρί Ωρίμανσης Cheddar, Μαγιονέζα,
                         Tomato Jam, Μαρούλι, Τομάτα, Κρεμμύδι
                         </p>
                 </div>
@@ -44,7 +35,7 @@ class Menu extends Component {
                     <p>
                         <strong>Tower Burger</strong>
                         <br />
-                        Ψωμί Brioche, American Cheddar, Tomato Jam, <br />
+                        Ψωμί Brioche, American Cheddar, Tomato Jam, 
                         Onion Rings, Πίκλες, Smoked Chili Mayo Sauce
                         </p>
                 </div>
@@ -54,7 +45,7 @@ class Menu extends Component {
                         <p>
                             <strong>New Yorker Double Burger</strong>
                             <br />
-                            Δύο Μπιφτέκια 120gr., American Cheddar, Hub Sauce, <br />
+                            Δύο Μπιφτέκια 120gr., American Cheddar, Hub Sauce,
                             Μαρούλι, Τομάτα, Κρεμμύδι
                         </p>
                     </div>
@@ -63,7 +54,7 @@ class Menu extends Component {
                         <p>
                             <strong>Cheese & Bacon Sweet Chili Chicken Burger</strong>
                             <br />
-                            Τυρί Ωρίμανσης Cheddar, Μπέικον, Sweet Chili Sauce, <br />
+                            Τυρί Ωρίμανσης Cheddar, Μπέικον, Sweet Chili Sauce, 
                             Μαγιονέζα, Tomato Jam, Μαρούλι
                         </p>
                     </div>
@@ -72,7 +63,7 @@ class Menu extends Component {
                         <p>
                             <strong>The Mexican Burger 170gr.</strong>
                             <br />
-                            Chili Con Carne, American Cheddar, Frizzled Onions <br />
+                            Chili Con Carne, American Cheddar, Frizzled Onions,
                             Spicy Mayo Sauce, Ψιλοκομμένη Τομάτα
                         </p>
                     </div>
