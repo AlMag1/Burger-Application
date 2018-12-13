@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import classes from './CustomerList.css';
 
 class CustomerList extends React.Component {
     state = {
@@ -7,7 +9,7 @@ class CustomerList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)   // to be edited with our url
+        axios.get(`http://localhost:8080/cb-group-project/api/customers`)   // to be edited with our url
             .then(res => {
                 const customers = res.data;
                 this.setState({ customers });
@@ -16,15 +18,18 @@ class CustomerList extends React.Component {
 
     render() {
         return (
-            <ul>
+            <div className={classes.div}>
+                <p><strong>Customer List:</strong></p>
                 {this.state.customers.map(customer =>
-                    <li key={'customer-'+customer.id}>
-                        <div>{customer.name}</div>
-                        <div>Email: {customer.email}</div>
-                        <div>id: {customer.id}</div>
-                    </li>
+                    <div key={'customer-' + customer.id}>
+                        <div><strong>First Name:</strong> {customer.firstName}</div>
+                        <div><strong>Last Name:</strong> {customer.lastName}</div>
+                        <div><strong>id:</strong> {customer.id}</div>
+                    </div>
                 )}
-            </ul>
+                <Link to="/admin-menu" style={{ margin: "20px" }} className="ant-btn ant-btn-primary ant-btn-sm" >Back</Link>
+            </div>
+
         )
     }
 }

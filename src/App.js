@@ -8,7 +8,6 @@ import Footer from './components/Static/Footer';
 import Customer from './components/Customers/Customer';
 import Admin from './components/Admins/Admin';
 import AdminMenu from './components/ViewEditDeleteCustomers/ViewEditDeleteCustomers';
-
 import SignUp from './components/Login/SignUp';
 import Order from './components/Order/Order';
 import CustomerList from './components/Admins/AdminMenu/CustomerList';

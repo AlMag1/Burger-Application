@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import BuildControls from './BuildControls';
 import _ from 'lodash';
+import axios from 'axios';
 
 
 const BURGER_PRICES = {
@@ -70,6 +71,18 @@ class BurgerBuilder extends Component {
         this.updatePurchaseState(updatedBurger);
     }
 
+    handleSubmit = event => {
+        event.preventDefault();
+
+        const order = _.pickBy(this.state.burgers, item => item !== 0); // remove empty items of the order
+        const totalPrice = this.state.totalPrice;
+
+        axios.post(`https://jsonplaceholder.typicode.com/users`, { order,totalPrice })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
+    }
 
     render() {
         const disabledInfo = {
@@ -80,20 +93,17 @@ class BurgerBuilder extends Component {
             disabledInfo[key] = disabledInfo[key] <= 0
         }
 
-        console.log(this.state.totalPrice);  // total price to be posted to backend 
-        const order = _.pickBy(this.state.burgers, item => item !== 0); // remove empty items of the order
-        console.log(order); // order details to be posted to backend
-
-
         return (
             <div>
-                <BuildControls
-                    burgerAdded={this.addBurgerHandler}
-                    burgerRemoved={this.removeBurgerHandler}
-                    disabled={disabledInfo}
-                    price={this.state.totalPrice}
-                    purchasable={this.state.purchasable}
-                />
+                <form onSubmit={this.handleSubmit}>
+                    <BuildControls
+                        burgerAdded={this.addBurgerHandler}
+                        burgerRemoved={this.removeBurgerHandler}
+                        disabled={disabledInfo}
+                        price={this.state.totalPrice}
+                        purchasable={this.state.purchasable}
+                    />
+                </form>
             </div>
         );
     }

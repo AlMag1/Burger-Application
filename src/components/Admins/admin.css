@@ -1,10 +1,11 @@
 .employee {
     text-align: center;
+    margin: 20px;
 }
 
 .orderButton {
     padding: 5px;
-    margin: 2%;
+    margin: 20px;
     cursor: pointer;
     font-family: inherit;
     color: #0099CC;

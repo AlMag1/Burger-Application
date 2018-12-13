@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './BuildControls.css';
-import {Card, Icon, Row, Col} from 'antd';
+import {Card, Icon, Row, Col, Tooltip} from 'antd';
 
 const burgers = [
     { label: 'Cheese & Bacon', type: 'cheesebacon', description: "Τυρί Ωρίμανσης Cheddar, Μπέικον, Μαγιονέζα,Tomato Jam, Μαρούλι, Τομάτα" },
@@ -20,8 +20,14 @@ const buildControls = (props) => (
                     className={classes.cards}
                     cover={<img alt="example" src={'/img/Menu/' + (index+1) +'.jpg'} />}
                     actions={[
-                        <span onClick={() => props.burgerRemoved(burger.type)}><Icon type="minus-circle" /> Remove</span>, 
-                        <span onClick={() => props.burgerAdded(burger.type)}><Icon type="plus-circle" /> Add</span>
+                        <Tooltip trigger="click" title="Removed!">
+                        <span onClick={() => {
+                            props.burgerRemoved(burger.type)
+                        }}><Icon type="minus-circle" /> Remove</span></Tooltip>, 
+                        <Tooltip trigger="click" title="Added!">
+                        <span onClick={() => {
+                            props.burgerAdded(burger.type)
+                        }}><Icon type="plus-circle" /> Add</span></Tooltip>
                     ]}
                 >
                     <Card.Meta

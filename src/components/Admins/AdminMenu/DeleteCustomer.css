@@ -1,10 +1,6 @@
-.employee {
-    text-align: center;
-}
-
-.orderButton {
+.back {
     padding: 5px;
-    margin: 2%;
+    margin: 20px;
     cursor: pointer;
     font-family: inherit;
     color: #0099CC;
@@ -13,12 +9,12 @@
     border-radius: 6px;
 }
 
-.orderButton:hover {
+.back:hover {
     background-color: #008CBA;
     color: white;
 }
 
-.credentials {
+.input {
     border: none;
     border-bottom: 1px solid black;
     margin: 5px;
@@ -28,6 +24,6 @@
     color: black;
 }
 
-.credentials:focus {
+.input:focus {
     border: 1px solid #ff471a;
 }

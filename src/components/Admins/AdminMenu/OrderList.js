@@ -16,15 +16,18 @@ class OrderList extends React.Component {
 
     render() {
         return (
-            <ul>
-                {this.state.orders.map(order =>
-                    <li key={'order-'+order.id}>
-                        <div>{order.name}</div>
-                        <div>{order.email}</div>
-                        <div>id:{order.id}</div>
-                    </li>
-                )}
-            </ul>
+            <div style={{textAlign: "center"}}>
+                <ul>
+                    {this.state.orders.map(order =>
+                        <li key={'order-' + order.id}>
+                            <div>{order.name}</div>
+                            <div>{order.email}</div>
+                            <div>id:{order.id}</div>
+                        </li>
+                    )}
+                </ul>
+            </div>
+
         )
     }
 }
