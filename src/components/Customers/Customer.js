@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import classes from './Customer.css';
+import {Link} from 'react-router-dom';
 
 class Customer extends Component {
     render() {
         return (
             <div className={classes.employee}>
-                <button className={classes.orderButton}>New Order</button>
-                <button className={classes.orderButton}>Order History</button>
+                <Link to="/order" className={classes.orderButton}>New Order</Link>
+                <Link to="/customer-order-list" className={classes.orderButton}>Order History</Link>
             </div>
         );
     }

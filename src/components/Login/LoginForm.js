@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import classes from './Login.css';
+import { Form, Icon, Input, Button, } from 'antd';
 
 class LoginForm extends Component {
     render() {
         return (
-            <form method="POST" className={classes.employee}>
+            <form className={classes.employee}>
                 <div>
                     <input type="text" name="username" placeholder="Username" className={classes.credentials}></input>
                 </div>

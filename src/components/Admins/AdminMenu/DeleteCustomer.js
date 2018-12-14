@@ -16,7 +16,10 @@ class DeleteCustomer extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.delete(`https://jsonplaceholder.typicode.com/users/${this.state.id}`)
+    const id = this.state.id;
+    console.log("id is " + id);
+
+    axios.delete(`localhost:8080/cb-group-project/api/delete-customers/` + id)
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -33,7 +36,6 @@ class DeleteCustomer extends React.Component {
             <input type="text" name="id" onChange={this.handleChange} className={classes.input} placeholder="Customer id"/>
           </label>
           <button type="submit" style={{margin: "20px"}} className="ant-btn ant-btn-primary ant-btn-sm">Delete</button>
-          
           <Link to="/admin-menu" className="ant-btn ant-btn-primary ant-btn-sm" >Back</Link>
         </form>
       </div>

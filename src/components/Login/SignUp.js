@@ -15,7 +15,7 @@ class SignUp extends Component {
             address: '',
             phone: 0,
             email: '',
-            role: ''
+            role: 'customer'
         }
     }
 
@@ -73,11 +73,11 @@ class SignUp extends Component {
         this.setState({ user });
     }
 
-    roleChangeHandler = (event) => {
-        let user = { ...this.state.user };
-        user.role = event.target.value;
-        this.setState({ user });
-    }
+    // roleChangeHandler = (event) => {
+    //     let user = { ...this.state.user };
+    //     user.role = event.target.value;
+    //     this.setState({ user });
+    // }
 
     handleSubmit = event => {
         event.preventDefault();
@@ -131,8 +131,8 @@ class SignUp extends Component {
                             <input type="email" name="email" id="email" placeholder="E-mail" className={classes.credentials} onChange={this.emailChangeHandler} />
                         </div>
                         <div className={classes.fields}>
-                            <label htmlFor="role">Role:</label>
-                            <input type="text" name="role" id="role" placeholder="Role" className={classes.credentials} onChange={this.roleChangeHandler} />
+                            {/* <label htmlFor="role">Role:</label>
+                            <input type="text" name="role" id="role" placeholder="Role" className={classes.credentials} onChange={this.roleChangeHandler} /> */}
 
 
                         </div>

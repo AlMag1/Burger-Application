@@ -7,7 +7,7 @@ class Admin extends Component {
     render() {
         return (
             <div className={classes.employee}>
-                <Link to="/customer-list" className={classes.orderButton}>Customers</Link>
+                <Link to="/admin-menu" className={classes.orderButton}>Customers</Link>
                 <Link to="/admin-order-list" className={classes.orderButton}>Order History</Link>
             </div>
         );
