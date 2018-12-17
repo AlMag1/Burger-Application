@@ -31,6 +31,7 @@
     background: transparent;
     border: 2px solid #0099CC;
     border-radius: 6px;
+    text-align: center;
 }
 
 .sign:hover {
@@ -38,3 +39,16 @@
     color: white;
 }
 
+.inputs {
+    width: 100px;
+}
+
+.labels {
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.outer {
+    width: 100%;
+}

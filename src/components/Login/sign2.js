@@ -88,51 +88,43 @@ class SignUp extends Component {
 
     render() {
         return (
-            <div className={classes.outer} style={{textAlign: "center"}}>
-                <form onSubmit={this.handleSubmit}>
-                    <div className={classes.first}>
-                        <div className={classes.labels}>
-                            <label htmlFor="username">Username:</label>
-                            <Input type="text" name="username" id="username" placeholder="Username" className={classes.inputs} onChange={this.inputChangeHandler} />
-                        </div>
-                        <div className={classes.labels}>
-                            <label htmlFor="password">Password:</label>
-                            <Input type="password" name="password" id="password" placeholder="Password" className={classes.inputs} onChange={this.passwordChangeHandler} />
-                        </div>
-                        <div className={classes.labels}>
-                            <label htmlFor="email">Email:</label>
-                            <Input type="email" name="email" id="email" placeholder="E-mail" className={classes.inputs} onChange={this.emailChangeHandler} />
-                        </div>
-                    </div>
-                    <div className={classes.second}>
-                        <div className={classes.labels}>
-                            <label htmlFor="firstName">Firstname:</label>
-                            <Input type="text" name="firstName" id="firstName" placeholder="Firstname" className={classes.inputs} onChange={this.firstnameChangeHandler} />
-                        </div>
-                        <div className={classes.labels}>
-                            <label htmlFor="lastName">Lastname:</label>
-                            <Input type="text" name="lastName" id="lastName" placeholder="Lastname" className={classes.inputs} onChange={this.lastnameChangeHandler} />
-                        </div>
-                        <div className={classes.labels}>
-                            <label htmlFor="phone">Telephone:</label>
-                            <Input type="text" name="phone" id="phone" placeholder="Telephone" className={classes.inputs} onChange={this.phoneChangeHandler} />
-                        </div>
-                    </div>
-                    <div className={classes.third}>
-                        <div className={classes.labels}>
-                            <label htmlFor="floor">Floor:</label>
-                            <Input type="number" name="floor" id="floor" placeholder="Floor" className={classes.inputs} onChange={this.floorChangeHandler} />
-                        </div>
-                        <div className={classes.labels}>
-                            <label htmlFor="postal-code">Postal Code:</label>
-                            <Input type="text" name="postal-code" id="postal-code" placeholder="Postal Code" className={classes.inputs} onChange={this.postalCodeChangeHandler} />
-                        </div>
-                        <div className={classes.labels}>
-                            <label htmlFor="address">Address:</label>
-                            <Input type="text" name="address" id="address" placeholder="Address" className={classes.inputs} onChange={this.addressChangeHandler} />
-                        </div>
-                    </div>
+            <div>
+                <form onSubmit={this.handleSubmit} >
                     <div className={classes.signUp}>
+                        <div className={classes.fields}>
+                            <label htmlFor="username">Username:</label>
+                            <Input type="text" name="username" id="username" placeholder="Username" className={ classes.inputs} onChange={this.inputChangeHandler} />
+                            <label htmlFor="password">Password:</label>
+                            <Input type="password" name="password" id="password" placeholder="Password" className={ classes.inputs} onChange={this.passwordChangeHandler} />
+                        </div>
+                        <div className={classes.fields}>
+
+                        </div>
+                        <div className={classes.fields}>
+                            <label htmlFor="firstName">Firstname:</label>
+                            <Input type="text" name="firstName" id="firstName" placeholder="Firstname" className={ classes.inputs} onChange={this.firstnameChangeHandler} />
+                            <label htmlFor="lastName">Lastname:</label>
+                            <Input type="text" name="lastName" id="lastName" placeholder="Lastname" className={ classes.inputs} onChange={this.lastnameChangeHandler} />
+                        </div>
+                        <div className={classes.fields}>
+
+                        </div>
+                        <div className={classes.fields}>
+                            <label htmlFor="floor">Floor:</label>
+                            <Input type="number" name="floor" id="floor" placeholder="Floor" className={ classes.inputs} onChange={this.floorChangeHandler} />
+                            <label htmlFor="postal-code">Postal Code:</label>
+                            <Input type="text" name="postal-code" id="postal-code" placeholder="Postal Code" className={ classes.inputs} onChange={this.postalCodeChangeHandler} />
+                        </div>
+                        <div className={classes.fields}>
+                            <label htmlFor="address">Address:</label>
+                            <Input type="text" name="address" id="address" placeholder="Address" className={ classes.inputs} onChange={this.addressChangeHandler} />
+                            <label htmlFor="phone">Telephone:</label>
+                            <Input type="text" name="phone" id="phone" placeholder="Telephone" className={ classes.inputs} onChange={this.phoneChangeHandler} />
+                        </div>
+                        <div className={classes.fields}>
+                            <label htmlFor="email">Email:</label>
+                            <Input type="email" name="email" id="email" placeholder="E-mail" className={ classes.inputs} onChange={this.emailChangeHandler} />
+                        </div>
                         <button type="submit" className={classes.sign}>Submit</button>
                     </div>
                 </form>

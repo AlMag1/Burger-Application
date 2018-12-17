@@ -19,15 +19,6 @@
 }
 
 .credentials {
-    border: none;
-    border-bottom: 1px solid black;
-    margin: 5px;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #e6ccb3;
-    color: black;
-}
-
-.credentials:focus {
-    border: 1px solid #ff471a;
+    width: 130px;
+    margin: 10px;
 }

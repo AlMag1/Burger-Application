@@ -8,14 +8,11 @@ class Header extends Component {
     render() {
         return (
             <div className={classes.header}>
-                
                 <SignIn />
                 <div className={classes.title}>
                     <h1>
                         - BORN TO GRILL -
                 </h1>
-                    {/* <p className={classes.subtitle}>Φρέσκα υλικά, σπιτικές συνταγές, μοναδικές γεύσεις!</p> */}
-
                 </div>
                 {window.location.pathname === '/' ? <Link to="/order" className={"ant-btn ant-btn-primary ant-btn-lg"}>ORDER NOW</Link> : null}
 
