@@ -19,7 +19,7 @@ class DeleteCustomer extends React.Component {
     const id = this.state.id;
     console.log("id is " + id);
 
-    axios.delete(`localhost:8080/cb-group-project/api/delete-customers/` + id)
+    axios.get(`localhost:8080/cb-group-project/api/delete-customers/` + id)
       .then(res => {
         console.log(res);
         console.log(res.data);

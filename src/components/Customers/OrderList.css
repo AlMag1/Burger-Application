@@ -1,0 +1,15 @@
+.outer {
+    width: 100%;
+}
+
+.orders {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.orders:last-child {
+    border: none;
+}

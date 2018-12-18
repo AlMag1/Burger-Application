@@ -40,15 +40,21 @@
 }
 
 .inputs {
-    width: 100px;
+    width: 180px;
 }
 
 .labels {
-    width: 100px;
+    width: 180px;
     display: inline-block;
     margin: 10px;
 }
 
 .outer {
     width: 100%;
+    text-align: center;
+}
+
+.first {
+    width: 50%;
+    margin: 0 auto;
 }

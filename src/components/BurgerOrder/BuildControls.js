@@ -7,7 +7,7 @@ const burgers = [
     { label: 'Cheeseburger', type: 'cheese', description: "Τυρί Ωρίμανσης Cheddar, Μαγιονέζα, Tomato Jam, Μαρούλι, Τομάτα, Κρεμμύδι" },
     { label: 'Tower Burger', type: 'tower', description: "Ψωμί Brioche, Cheddar, Tomato Jam, Onion Rings, Πίκλες, Smoked Chili Sauce" },
     { label: 'New Yorker', type: 'newyork', description: "Δύο Μπιφτέκια 120gr., American Cheddar, Hub Sauce, Μαρούλι, Τομάτα, Κρεμμύδι" },
-    { label: 'Cheese & Bacon Sweet Chili', type: 'sweetchili', description: "Τυρί Ωρίμανσης Cheddar, Μπέικον, Sweet Chili Sauce, Μαγιονέζα, Tomato Jam" },
+    { label: 'Bacon Sweet Chili', type: 'sweetchili', description: "Τυρί Ωρίμανσης Cheddar, Μπέικον, Sweet Chili Sauce, Μαγιονέζα, Tomato Jam" },
     { label: 'Mexican Burger', type: 'mexican', description: "Chili Con Carne, American Cheddar, Frizzled Onions,Spicy Mayo Sauce" }
 ];
 

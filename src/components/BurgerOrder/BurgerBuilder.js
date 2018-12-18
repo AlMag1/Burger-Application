@@ -22,9 +22,9 @@ class BurgerBuilder extends Component {
             tower: 0,
             newyork: 0,
             sweetchili: 0,
-            mexican: 0
+            mexican: 0,
         },
-        totalPrice: 0,
+        price: 0,
         purchasable: false
     }
 
@@ -48,9 +48,9 @@ class BurgerBuilder extends Component {
         };
         updatedBurger[type] = updatedCount;
         const priceAddition = BURGER_PRICES[type];
-        const oldPrice = this.state.totalPrice;
+        const oldPrice = this.state.price;
         const newPrice = oldPrice + priceAddition;
-        this.setState({ totalPrice: newPrice, burgers: updatedBurger });
+        this.setState({ price: newPrice, burgers: updatedBurger });
         this.updatePurchaseState(updatedBurger);
     }
 
@@ -65,9 +65,9 @@ class BurgerBuilder extends Component {
         };
         updatedBurger[type] = updatedCount;
         const priceDeduction = BURGER_PRICES[type];
-        const oldPrice = this.state.totalPrice;
+        const oldPrice = this.state.price;
         const newPrice = oldPrice - priceDeduction;
-        this.setState({ totalPrice: newPrice, burgers: updatedBurger });
+        this.setState({ price: newPrice, burgers: updatedBurger });
         this.updatePurchaseState(updatedBurger);
     }
 
@@ -75,9 +75,12 @@ class BurgerBuilder extends Component {
         event.preventDefault();
 
         const order = _.pickBy(this.state.burgers, item => item !== 0); // remove empty items of the order
-        const totalPrice = this.state.totalPrice;
+        const price = this.state.price;
+        // const quantity = this.state.burgers.cheese + this.state.burgers.cheesebacon + this.state.burgers.mexican
+        //     + this.state.burgers.newyork + this.state.burgers.sweetchili + this.state.burgers.tower;
+        // const order = _.pick(this.state.burgers, ['cheese', 'cheesebacon', 'tower', 'newyork', 'sweetchili', 'mexican'])
 
-        axios.post(`https://jsonplaceholder.typicode.com/users`, { order,totalPrice })
+        axios.post(`http://localhost:8080/cb-group-project/api/orders`, {...order, price})
             .then(res => {
                 console.log(res);
                 console.log(res.data);
@@ -100,7 +103,7 @@ class BurgerBuilder extends Component {
                         burgerAdded={this.addBurgerHandler}
                         burgerRemoved={this.removeBurgerHandler}
                         disabled={disabledInfo}
-                        price={this.state.totalPrice}
+                        price={this.state.price}
                         purchasable={this.state.purchasable}
                     />
                 </form>

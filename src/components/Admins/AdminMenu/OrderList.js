@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import classes from './OrderList.css';
 
 class OrderList extends React.Component {
     state = {
@@ -7,7 +8,7 @@ class OrderList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)   // to be edited with our url
+        axios.get(`http://localhost:8080/cb-group-project/api/orders`)   // to be edited with our url
             .then(res => {
                 const orders = res.data;
                 this.setState({ orders });
@@ -16,16 +17,14 @@ class OrderList extends React.Component {
 
     render() {
         return (
-            <div style={{textAlign: "center"}}>
-                <ul>
-                    {this.state.orders.map(order =>
-                        <li key={'order-' + order.id}>
-                            <div>{order.name}</div>
-                            <div>{order.email}</div>
-                            <div>id:{order.id}</div>
-                        </li>
-                    )}
-                </ul>
+            <div className={classes.outer}>
+                {this.state.orders.map(order =>
+                    <div key={'order-'+order.id} className={classes.orders}>
+                        <div><strong>ID: </strong>{order.id}</div>
+                        <div><strong>Date: </strong>{order.date}</div>
+                        <div><strong>Price: </strong>{order.price}</div>
+                    </div>
+                )}
             </div>
 
         )

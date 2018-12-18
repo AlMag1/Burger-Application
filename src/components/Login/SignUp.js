@@ -88,7 +88,7 @@ class SignUp extends Component {
 
     render() {
         return (
-            <div className={classes.outer} style={{textAlign: "center"}}>
+            <div className={classes.outer}>
                 <form onSubmit={this.handleSubmit}>
                     <div className={classes.first}>
                         <div className={classes.labels}>
