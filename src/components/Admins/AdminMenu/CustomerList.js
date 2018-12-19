@@ -9,7 +9,7 @@ class CustomerList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8080/cb-group-project/api/customers`)   // to be edited with our url
+        axios.get(`http://localhost:8080/cb-group-project/api/customers`)
             .then(res => {
                 const customers = res.data;
                 this.setState({ customers });

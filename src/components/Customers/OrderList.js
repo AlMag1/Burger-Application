@@ -9,7 +9,7 @@ class OrderList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8080/cb-group-project/api/orders`)   // to be edited with our url
+        axios.get(`http://localhost:8080/cb-group-project/api/orders`)
             .then(res => {
                 const orders = res.data;
                 this.setState({ orders });

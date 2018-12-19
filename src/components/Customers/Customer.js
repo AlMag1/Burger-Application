@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import classes from './Customer.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Customer extends Component {
     render() {

@@ -7,7 +7,7 @@ class OrderList extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)   // to be edited with our url
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
             .then(res => {
                 const orders = res.data;
                 this.setState({ orders });
@@ -18,7 +18,7 @@ class OrderList extends React.Component {
         return (
             <ul>
                 {this.state.orders.map(order =>
-                    <li key={'order-'+order.id}>
+                    <li key={'order-' + order.id}>
                         <div>{order.name}</div>
                         <div>{order.email}</div>
                         <div>id:{order.id}</div>

@@ -69,7 +69,7 @@ class buildControls extends Component {
                 </Row>
                 <button onClick={this.showModal} className={classes.OrderButton} disabled={!this.props.purchasable}>ORDER NOW {this.props.price ? this.props.price.toFixed(2) + ' €' : ''}</button>
                 <Modal
-                    style={{textAlign: "center"}}
+                    style={{ textAlign: "center" }}
                     title="Ευχαριστούμε για την παραγγελία σας!"
                     visible={this.state.visible}
                     onOk={this.handleOk}
@@ -79,7 +79,7 @@ class buildControls extends Component {
                   </Button>}
                 >
                     <p>Η παραγγελία σας κοστίζει <strong>{this.props.price}€</strong></p>
-                    <p>και θα είναι κοντά σας σε <br /><span style={{fontSize: "40px"}}>30'</span></p>
+                    <p>και θα είναι κοντά σας σε <br /><span style={{ fontSize: "40px" }}>30'</span></p>
                 </Modal>
             </div>
 

@@ -27,7 +27,6 @@ strong {
 body {
     font-size: 13px;
     background-color: #fff2e6;
-
 }
 
 .App {
@@ -35,7 +34,6 @@ body {
     min-height: 100%;
     margin: 0 auto;
     max-width: 100%;
-    
 }
 
 .header {

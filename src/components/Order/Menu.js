@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classes from './Order.css';
-import {Card, Icon} from 'antd';
 
 import Burger1 from '../../assets/img/Menu/1.jpg';
 import Burger2 from '../../assets/img/Menu/2.jpg';
@@ -18,9 +17,9 @@ class Menu extends Component {
                     <p>
                         <strong>Cheese & Bacon Burger</strong>
                         <br />
-                        </p>
+                    </p>
                 </div>
-               
+
                 <div className={classes.burger}>
                     <img src={Burger2} alt="first-burger" />
                     <p>
@@ -35,7 +34,7 @@ class Menu extends Component {
                     <p>
                         <strong>Tower Burger</strong>
                         <br />
-                        Ψωμί Brioche, American Cheddar, Tomato Jam, 
+                        Ψωμί Brioche, American Cheddar, Tomato Jam,
                         Onion Rings, Πίκλες, Smoked Chili Mayo Sauce
                         </p>
                 </div>
@@ -54,7 +53,7 @@ class Menu extends Component {
                         <p>
                             <strong>Cheese & Bacon Sweet Chili Chicken Burger</strong>
                             <br />
-                            Τυρί Ωρίμανσης Cheddar, Μπέικον, Sweet Chili Sauce, 
+                            Τυρί Ωρίμανσης Cheddar, Μπέικον, Sweet Chili Sauce,
                             Μαγιονέζα, Tomato Jam, Μαρούλι
                         </p>
                     </div>
