@@ -1,5 +1,6 @@
 .outer {
     width: 100%;
+    text-align: center;
 }
 
 .orders {
@@ -12,4 +13,9 @@
 
 .orders:last-child {
     border: none;
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 20px;
 }

@@ -1,8 +1,9 @@
-.employee {
+.customer {
     text-align: center;
+    margin: 20px;
 }
 
-.orderButton {
+.customerButton {
     padding: 5px;
     margin: 2%;
     cursor: pointer;
@@ -13,7 +14,7 @@
     border-radius: 6px;
 }
 
-.orderButton:hover {
+.customerButton:hover {
     background-color: #008CBA;
     color: white;
 }

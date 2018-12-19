@@ -1,8 +1,21 @@
-.div {
+.outer {
+    width: 100%;
     text-align: center;
 }
 
-.div p {
-    margin: 10px;
-    font-size: 16px;
+.customers {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.customers:last-child {
+    border: none;
+}
+
+.title {
+    font-size: 20px;
+    margin-top: 20px;
 }

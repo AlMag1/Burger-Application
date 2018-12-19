@@ -76,11 +76,8 @@ class BurgerBuilder extends Component {
 
         const order = _.pickBy(this.state.burgers, item => item !== 0); // remove empty items of the order
         const price = this.state.price;
-        // const quantity = this.state.burgers.cheese + this.state.burgers.cheesebacon + this.state.burgers.mexican
-        //     + this.state.burgers.newyork + this.state.burgers.sweetchili + this.state.burgers.tower;
-        // const order = _.pick(this.state.burgers, ['cheese', 'cheesebacon', 'tower', 'newyork', 'sweetchili', 'mexican'])
 
-        axios.post(`http://localhost:8080/cb-group-project/api/orders`, {...order, price})
+        axios.post(`http://localhost:8080/cb-group-project/api/orders`, { ...order, price })
             .then(res => {
                 console.log(res);
                 console.log(res.data);

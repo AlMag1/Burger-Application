@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from './SignUp.css';
 import axios from 'axios';
 import _ from 'lodash';
-import { Input } from 'antd';
+import { Input, Modal, Button } from 'antd';
 
 class SignUp extends Component {
     state = {
@@ -17,7 +17,8 @@ class SignUp extends Component {
             phone: 0,
             email: '',
             role: 'customer'
-        }
+        },
+        visible: false
     }
 
     inputChangeHandler = (event) => {
@@ -72,6 +73,26 @@ class SignUp extends Component {
         let user = { ...this.state.user };
         user.email = event.target.value;
         this.setState({ user });
+    }
+
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    }
+
+    handleOk = (e) => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    }
+
+    handleCancel = (e) => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
     }
 
     handleSubmit = event => {
@@ -133,8 +154,21 @@ class SignUp extends Component {
                         </div>
                     </div>
                     <div className={classes.signUp}>
-                        <button type="submit" className={classes.sign}>Submit</button>
+                        <button type="submit" className={classes.sign} onClick={this.showModal}>Submit</button>
                     </div>
+                    <Modal
+                        style={{ textAlign: "center" }}
+                        title="Επιτυχής καταχώρηση στοιχείων!"
+                        visible={this.state.visible}
+                        onOk={this.handleOk}
+                        onCancel={this.handleCancel}
+                        footer={<Button key="submit" type="primary" onClick={this.handleOk}>
+                            Εντάξει
+                  </Button>}
+                    >
+                        <p>Τα στοιχεία σας καταχωρήθηκαν επιτυχώς.</p>
+                        <p>Σας ευχαριστούμε πολύ!</p>
+                    </Modal>
                 </form>
             </div>
         );
